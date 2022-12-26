@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.wrapper{
+    margin: 2rem auto;
+    background-color: transparent;
+    width: 375px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header a{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+header .notification-counter{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.notification-counter span{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding:.3rem .8rem;
+    border-radius: 8px;
+    margin-left: .5rem;
+    width: 35px;
+    text-align: center;
+}
+.clear{
+    transition: .3s ease;
+}
+
+.clear:hover{
+    letter-spacing: .01rem;
+}
+
+.notify{
+    background-color: transparent;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.notify.unread{
+    background-color: hsl(210, 60%, 98%);
+}
+
+.notify strong,.notify img{
+    cursor: pointer;
+    color: black;
+}
+
+.notify a{
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
+.notify p{
+    color: hsl(219, 12%, 42%);
+}
+
+.notify img{
+    height: 50px;
+}
+
+.notify-content{
+    margin-left:1rem;
+    background-color: transparent;
+}
+
+
+.message p{
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    padding: .3rem;
+    text-align: left;
+    border-radius: .2rem;
+    transition: .3s ease;
+}
+
+
+.message img{
+    margin-left: 1rem;
+}
+
+.ntf-message{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.ntf-message .message{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 1rem;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.ntf-message .message:hover{
+    background-color: hsl(211, 68%, 94%);
+}
+
+.message:hover p{
+    border: 1px solid hsl(211, 68%, 94%);
+    border-radius: .2rem;
+}
+
+.notify.unread .reddot{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.notify .reddot{
+    display: none;
+}
+
+.main-text{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: .3s ease;
+}
+
+@media only screen and (min-width: 900px){
+    
+    body{
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        background-color: hsl(211, 68%, 94%);
+    }
+
+    .wrapper{
+        width: 50vw;
+        background-color: white;
+        border-radius: 1rem;
+    }
+
+    .notification-counter{
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+    }
+}
